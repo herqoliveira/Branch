@@ -10,9 +10,7 @@ const validar = document.getElementById('validarIdade');
 validar.addEventListener('click', function validarIdade(){
     const idade = document.getElementById('idadeUsu');
     const resposta = document.getElementById('respostaIdade');
-    if (!isNaN(idade)){
-        resposta.textContent = "Você nem digitou um número válido";        
-    }else if(idade < 18){
+    if(Number(idade.value) < 18){
         resposta.textContent = "Você não tem idade para o que está fazendo agora";
     }else{
         resposta.textContent = "Compra autorizada"
